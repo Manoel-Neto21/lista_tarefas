@@ -1,0 +1,7 @@
+Programação funcional: Usamos Array.filter() e Array.reduce() para trabalhar de maneira funcional, processando e transformando dados.
+
+Módulos (ESM): Usamos a estrutura de módulos do JavaScript (ESM), importando e exportando classes e funções entre arquivos para manter o código modular e organizado.
+
+Componentes dinâmicos: Criamos manualmente os componentes da lista de tarefas (HTML) com JavaScript puro, manipulando o DOM diretamente sem o uso de bibliotecas como React ou Vue.
+
+Vite: O Vite é usado para criar um ambiente de desenvolvimento rápido e eficiente. Ele lida com o bundling e atualizações em tempo real.
