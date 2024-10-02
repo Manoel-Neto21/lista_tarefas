@@ -1,7 +1,4 @@
 
-// Integração dos módulos: O main.js importa o ListaTarefas para gerenciar a lista e o mostraListaTarfas para atualizar a interface conforme as ações do usuário.
-
-// src/main.js
 import { ListaTarefas } from './logica.js';
 import { mostraListaTarefas } from './interface.js';
 

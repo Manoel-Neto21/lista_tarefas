@@ -1,7 +1,4 @@
 
-// Criação dinâmica de componentes: Aqui criamos os elementos HTML de forma manual, adicionando eventos de clique para completar e deletar tarefas. Nenhuma biblioteca de UI é usada, tudo é feito manualmente com o DOM.
-
-// src/interface.js
 export function mostraListaTarefas(tarefas, container) {
     container.innerHTML = ''; // Limpa o conteúdo anterior
     tarefas.forEach((tarefa, index) => {

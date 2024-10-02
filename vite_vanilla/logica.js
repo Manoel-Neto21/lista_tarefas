@@ -1,9 +1,4 @@
 
-// Array.map(), Array.filter(): O método filter() é usado em várias funções para retornar listas filtradas de tarefas (completas ou incompletas).
-
-// Array.reduce(): O método reduce() é utilizado no método countTasks() para contar o número total de tarefas e as tarefas concluídas.
-
-// logica.js
 export class ListaTarefas {
     constructor() {
       this.tarefas = [];
@@ -16,9 +11,7 @@ export class ListaTarefas {
     completaTarefa(index) {
       this.tarefas[index].completada = true;
     }
-
-  // Array.map(), Array.filter(): O método filter() é usado em várias funções para retornar listas filtradas de tarefas (completas ou incompletas).
-    
+ 
     deletaTarefa(index) {
       this.tarefas = this.tarefas.filter((_, i) => i !== index);
     }
