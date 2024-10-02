@@ -1,24 +1,23 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Integração dos módulos: O main.js importa o ListaTarefas para gerenciar a lista e o mostraListaTarfas para atualizar a interface conforme as ações do usuário.
 
-setupCounter(document.querySelector('#counter'))
+// src/main.js
+import { ListaTarefas } from './logica.js';
+import { mostraListaTarefas } from './interface.js';
+
+const listaTarefas = new ListaTarefas();
+const criaTarefa = document.getElementById('criaTarefa');
+const conteinerTarefa = document.getElementById('conteinerTarefa');
+const addBotao = document.getElementById('addBotao');
+
+addBotao.addEventListener('click', () => {
+  const taskText = criaTarefa.value;
+  if (taskText) {
+    listaTarefas.adicionaTarefa(taskText);
+    criaTarefa.value = ''; // Limpa o campo de texto
+    mostraListaTarefas(listaTarefas.exibeTodasTarefas(), conteinerTarefa);
+  }
+});
+
+mostraListaTarefas(listaTarefas.exibeTodasTarefas(), conteinerTarefa);
+
